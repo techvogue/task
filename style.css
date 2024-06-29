@@ -303,8 +303,8 @@ div.banner-text p{
 
 .rounded-button {
     position: fixed;
-    bottom: 60px;
-    right: 60px;
+    bottom: 40px;
+    right: 40px;
     width: 60px;
     height: 60px;
     background: linear-gradient(180deg, #FF5C5C 0%, #F0568A 100%);
