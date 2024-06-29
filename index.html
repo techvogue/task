@@ -539,7 +539,7 @@
                     </div>
                     <div class="modal-body mt-5 mx-4">
                         <form>
-                            <div class="d-flex w-100">
+                            <div class="d-flex w-100 gap-1">
                                 <div class="w-50">
                                     <input type="text" class="form-control rounded-0" id="fname"
                                         placeholder="First Name">
@@ -549,20 +549,23 @@
                                         placeholder="Last Name">
                                 </div>
                             </div>
-                            <div class="">
+                            <div class="mt-2 ">
 
                                 <input type="email" class="form-control rounded-0" id="email"
-                                    placeholder="Your email..">
+                                    placeholder="Email..">
                             </div>
-                            <div class="">
-
-                                <input type="password" class="form-control rounded-0" id="password"
-                                    placeholder="Your password..">
+                            <div class="form-group position-relative">
+                                <input type="password" placeholder="Password" class="form-control rounded-0 my-2"
+                                    id="signUpPass">
+                                <span class="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer"
+                                    onclick="togglePassword('signUpPass')">
+                                    <img src="images/visibility_24px_outlined.png" alt="Toggle Visibility">
+                                </span>
                             </div>
                             <div class="">
 
                                 <input type="password" class="form-control rounded-0" id="confirm-password"
-                                    placeholder="Confirm password..">
+                                    placeholder="Confirm password...">
                             </div>
                             <div class="d-flex justify-content-between align-items-center my-4">
                                 <button type="submit" class="btn rounded-pill btn-primary">Create Account</button>
@@ -594,21 +597,24 @@
                             <div class="my-2">
 
                                 <input type="email" class="form-control rounded-0" id="email"
-                                    placeholder="Your email..">
+                                    placeholder="Email">
                             </div>
-                            <div class="my-2">
-
-                                <input type="password" class="form-control rounded-0" id="password"
-                                    placeholder="Your password..">
+                            <div class="form-group position-relative">
+                                <input type="password" placeholder="Password" class="form-control rounded-0 my-2"
+                                    id="signInPass">
+                                <span class="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer"
+                                    onclick="togglePassword('signInPass')">
+                                    <img src="images/visibility_24px_outlined.png" alt="Toggle Visibility">
+                                </span>
                             </div>
                             <div class="">
 
                                 <input type="password" class="form-control rounded-0" id="confirm-password"
-                                    placeholder="Confirm password..">
+                                    placeholder="Confirm password">
                             </div>
                             <div class="d-flex justify-content-between align-items-center my-2">
                                 <button type="submit" class="btn rounded-pill btn-primary ">Sign In</button>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#signInModal" class="p-3">Create
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#myModal" class="p-3">Create
                                     Account</a>
                             </div>
                         </form>
