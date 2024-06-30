@@ -156,6 +156,7 @@ nav span {
 
 div.banner-text
 {
+    width: 85%;
     position: relative;
     top: 270px;
     left: 80px;
@@ -299,10 +300,10 @@ div.banner-text p{
 
 /* button for mobile modal */
 
-.rounded-button {
+/* .rounded-button {
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 60px;
+    right: 60px;
     width: 60px;
     height: 60px;
     background: linear-gradient(180deg, #FF5C5C 0%, #F0568A 100%);
@@ -317,7 +318,8 @@ div.banner-text p{
   .rounded-button img {
    
     width: 50%;
+    height: 50%;
    
-  }
+  } */
 
 
