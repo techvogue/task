@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+     
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <nav class="d-none d-lg-flex ">
+        <div>
+            <a href=""><img src="images/whole.png" alt=""></a>
+        </div>
+        <form action="">
+            <button type="submit"><img src="images/baseline-search-24px.png" alt=""></button>
+            <input class="me-2" type="search" placeholder="Search for your favorite groups in ATG" aria-label="Search">
+        </form>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="modal-title" id="authModalLabel">Let's learn, share &amp; inspire each other with our
+                            passion for computer engineering. Sign up now 🤘🏼</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-5">
+                        <!-- SignUp Form Content -->
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <h2>Sign Up</h2>
+                                <div class="form-row d-flex">
+                                    <div class="form-group col-md-6">
+                                        <input placeholder="First Name" type="text" class="form-control rounded-0"
+                                            id="firstName">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input placeholder="Last Name" type="text" class="form-control rounded-0"
+                                            id="lastName">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input placeholder="Email" type="email" class="form-control rounded-0" id="email">
+                                </div>
+                                <div class="form-group position-relative">
+                                    <input placeholder="Password" type="password" class="form-control rounded-0"
+                                        id="password">
+                                    <span class="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer"
+                                        onclick="togglePassword('password')">
+                                        <img src="images/visibility_24px_outlined.png" alt="Toggle Visibility">
+                                    </span>
+                                </div>
+                                <div class="form-group position-relative">
+                                    <input placeholder="Confirm Password" type="password" class="form-control rounded-0"
+                                        id="confirmPassword">
+
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block w-100 my-4 rounded-pill"
+                                    id="signUpButton">Create Account</button>
+                                <button type="button" class="btn btn-outline-dark w-100 my-2"> <img
+                                        src="images/f_logo_RGB-Blue_1024.png" alt=""> Sign Up with Facebook</button>
+                                <button type="button" class="btn btn-outline-dark w-100 "> <img src="images/search.png"
+                                        alt=""> Sign Up with Google</button>
+                            </div>
+                            <div class="col-md-6 illustration">
+                                <div class="text-center m-auto">
+                                    <p class="text-center fs-5 mt-3">Already have an account? <a href="#" class=""
+                                            data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign In</a></p>
+                                </div>
+                                <img src="images/Group 3.png" alt="Random Image">
+                                <p class=" tc">By signing up, you agree to our Terms & conditions, Privacy policy</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="modal-title" id="authModalLabel">Let's learn, share &amp; inspire each other with our
+                            passion for computer engineering. Sign up now 🤘🏼</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-5">
+                        <!-- SignIn Form Content -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2>Sign In</h2>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Email" class="form-control rounded-0"
+                                        id="signInEmail">
+                                </div>
+                                <div class="form-group position-relative">
+                                    <input type="password" placeholder="Password" class="form-control rounded-0 my-2"
+                                        id="signInPassword">
+                                    <span class="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer"
+                                        onclick="togglePassword('signInPassword')">
+                                        <img src="images/visibility_24px_outlined.png" alt="Toggle Visibility">
+                                    </span>
+                                </div>
+                                <button type="button" class="btn btn-primary w-100 my-3 rounded-pill" id="signInButton"
+                                    data-bs-dismiss="modal" aria-label="Close">Sign In</button>
+                                <button type="button" class="btn btn-outline-dark w-100 my-2"> <img
+                                        src="images/f_logo_RGB-Blue_1024.png" alt=""> Sign In with Facebook</button>
+                                <button type="button" class="btn btn-outline-dark w-100 "> <img src="images/search.png"
+                                        alt=""> Sign In with Google</button>
+                                <div class="modal-footer">
+                                    <a href="#" class="">Forgot Password?</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-center mt-3">
+                                    <p>Don't have an account? <a class="" data-bs-target="#exampleModalToggle"
+                                            data-bs-toggle="modal">Create Account</a></p>
+                                </div>
+                                <img src="images/Group 3.png" alt="Random image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a id="signup" class=" text-decoration-none text-reset" data-bs-target="#exampleModalToggle"
+            data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+            <p>Create account. <span>It’s free! <img src="images/baseline-arrow_drop_down-24px.jpg" alt=""></span></p>
+        </a>
+
+
+
+
+
+
+        <div class="d-none" id="profilepic">
+
+            <div class="dropdown ">
+                <a class=" bg-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="d-flex align-items-center   gap-1">
+                        <button class="d-flex align-items-center gap-2 p-0 m-0 bg-white">
+                            <img class="rounded-circle" alt="Profile" src="images/Rectangle 3-3.png" width="36"
+                                height="36">
+                            <div class="text-wrapper">Siddharth Goyal</div>
+                            <div class="d-flex align-items-center"><img class="rounded-circle" alt="Profile"
+                                    src="images/baseline-arrow_drop_down-24px.jpg"></div>
+                        </button>
+
+                    </div>
+                </a>
+
+                <ul id="logout" class="dropdown-menu w-100 mt-2">
+                    <li><a class="dropdown-item text-center" href="#">LogOut </a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <section class=" d-lg-none w-100">
+        <img class="w-100" src="images/Group 4.png" alt="Nav_img">
+    </section>
+
+
+    <section>
+        <div class="banner">
+            <div class="banner-text-container h-100">
+                <div class="banner-text">
+                    <h2>Computer Engineering</h2>
+                    <p>142,765 Computer Engineers follow this</p>
+                </div>
+                <div class="d-flex d-lg-none justify-content-between mt-3">
+                    <button class="btn back"><img src="images/icons/arrow_back_24px.png" alt="back">
+                        <button id="toggleButton" class="leavegroup btn join-group" data-state="join">
+                            <img id="toggleImage" src="images/icons/Join Group.png" alt="">
+
+                        </button>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="d-none d-lg-flex justify-content-between mx-auto align-items-center container "
+            style="max-width: 1040px; height: 68px; background: rgb(255, 255, 255); border-top: 1px solid rgba(0, 0, 0, 0.2);">
+            <ul class="nav my-2 nav-underline">
+                <li class="nav-item"><a class="nav-link active" href="/">All Posts (32)</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Article</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Event</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Job</a></li>
+            </ul>
+            <div class="d-flex my-2 align-items-center ">
+                <button class="btn " aria-label="write-post" style="background: rgb(242, 242, 242);">Write Post<img
+                        class="px-2" src="images/baseline-arrow_drop_down-24px.jpg" alt="arrow down"></button>
+                <button id="joinLeaveButton" class="btn btn-primary ms-2 gap-2 d-flex align-items-center"
+                    aria-label="Join group" style="border: 0.8px solid rgb(152, 152, 153);">
+                    <img id="joinLeaveIcon" src="images/baseline-group_add-24px.png" alt="Join group">
+                    <span id="joinLeaveText">Join Group</span>
+                </button>
+
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+
+    <!-- Post section -->
+
+    <div class="container d-flex my-4">
+
+
+        <!-- left-post-section -->
+        <div class=" post ms-lg-4 d-flex flex-column gap-4 ">
+
+
+            <!-- first post -->
+            <div class="d-flex w-100 ">
+                <div class="d-flex flex-column border border-1 rounded-2 me-lg-3">
+                    <div class="d-flex d-lg-none w-100 p-3 top-4 align-items-center justify-content-between ">
+                        <div class="text-main-posts ">Posts(368)</div>
+                        <button class="btn bg-light d-flex align-items-center gap-2">Filter : All <img
+                                src="images/baseline-arrow_drop_down-24px.jpg" alt="arrowdown" width="20"
+                                height="20"></button>
+                    </div>
+                    <img src="images/daniel.png" alt="Nature" class="imagePost">
+                    <div class="p-4">
+                        <h3 class="">✍️ Article</h3>
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h4>What if famous brands had regular fonts? Meet RegulaBrands!</h4>
+                            <div class="btn">
+                                <div class="dropdown">
+                                    <div type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img class="w-60 h-100 " src="images/Vector.png" alt="more details" height="22"
+                                            width="22">
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item" type="button">Save</button></li>
+                                        <li><button class="dropdown-item" type="button">Report</button></li>
+                                        <li><button class="dropdown-item" type="button">Option 3</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2">
+                                <img class="rounded-circle" alt="Profile" src="images/pf-1.png" width="48" height="48">
+                                <div class="d-flex flex-column">
+                                    <div class="text-wrapper">Siddharth Goyal</div>
+                                    <div class="d-lg-none d-flex align-items-center gap-2">
+                                        <img src="images/visibility_24px_outlined.png" alt="watch">
+                                        <span>1.4k views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-lg-block pe-4">
+                                <img src="images/visibility_24px_outlined.png" alt="watch">
+                                <span>1.4k views</span>
+                            </div>
+                            <button class="p-1 btn d-flex align-items-center gap-1 "
+                                style="background: rgb(237, 238, 240);">
+                                <img src="images/baseline-share-24px.png" alt="share">
+                                <span class="d-lg-none">Share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- second post -->
+            <div class="d-flex w-100">
+                <div class="d-flex flex-column border border-1 rounded-2 me-lg-3">
+                    <img src="images/Rectangle 5.png" alt="Nature" class="imagePost">
+                    <div class="p-4">
+                        <h3 class="">🔬️ Education</h3>
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h4>Tax Benefits for Investment under National Pension Scheme launched by Government</h4>
+                            <div class="btn">
+                                <div class="dropdown">
+                                    <div type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img class="w-60 h-100 " src="images/Vector.png" alt="more details" height="22"
+                                            width="22">
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item" type="button">Save</button></li>
+                                        <li><button class="dropdown-item" type="button">Report</button></li>
+                                        <li><button class="dropdown-item" type="button">Option 3</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2">
+                                <img class="rounded-circle" alt="Profile" src="images/Rectangle 3-1.png" width="48"
+                                    height="48">
+                                <div class="d-flex flex-column">
+                                    <div class="text-wrapper">Sarah West</div>
+                                    <div class="d-lg-none d-flex align-items-center gap-2">
+                                        <img src="images/visibility_24px_outlined.png" alt="watch">
+                                        <span>1.4k views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-lg-block pe-4">
+                                <img src="images/visibility_24px_outlined.png" alt="watch">
+                                <span>1.4k views</span>
+                            </div>
+                            <button class="btn d-flex align-items-center gap-2" style="background: rgb(237, 238, 240);">
+                                <img src="images/baseline-share-24px.png" alt="share">
+                                <span class="d-lg-none">Share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third post -->
+            <div class="d-flex w-100 ">
+                <div class="d-flex flex-column border border-1 rounded-2 me-lg-3">
+                    <img src="images/Rectangle 5-1.png" alt="Nature" class="imagePost">
+                    <div class="p-4">
+                        <h3 class="">🗓️ Meetup</h3>
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h4>Finance & Investment Elite Social Mixer @Lujiazui</h4>
+                            <div class="btn">
+                                <div class="dropdown">
+                                    <div type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img class="w-60 h-100 " src="images/Vector.png" alt="more details" height="22"
+                                            width="22">
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item" type="button">Save</button></li>
+                                        <li><button class="dropdown-item" type="button">Report</button></li>
+                                        <li><button class="dropdown-item" type="button">Option 3</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="d-flex align-items-center gap-5 mt-2 list-unstyled ">
+                            <li class="d-flex align-items-center gap-1"><img src="images/icons/baseline-today-24px.png"
+                                    alt="date" width="20px" height="20px">Fri, 12 Oct, 2018</li>
+                            <li class="d-flex align-items-center gap-1"><img src="images/outline-location_on-24px 2.png"
+                                    alt="location" width="20px" height="20px">Ahmedabad, India</li>
+                        </ul>
+                        <button class=" btn visitwebsite mb-4 fw-semibold w-100 ">Visit WebSite</button>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2">
+                                <img class="rounded-circle" alt="Profile" src="images/Rectangle 3-2.png" width="48"
+                                    height="48">
+                                <div class="d-flex flex-column">
+                                    <div class="text-wrapper">Ronal Jones</div>
+                                    <div class="d-lg-none d-flex align-items-center gap-2">
+                                        <img src="images/visibility_24px_outlined.png" alt="watch">
+                                        <span>1.4k views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-lg-block pe-4">
+                                <img src="images/visibility_24px_outlined.png" alt="watch">
+                                <span>1.4k views</span>
+                            </div>
+                            <button class="btn d-flex align-items-center gap-2" style="background: rgb(237, 238, 240);">
+                                <img src="images/baseline-share-24px.png" alt="share">
+                                <span class="d-lg-none">Share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 4th post -->
+            <div class="d-flex w-100 ">
+                <div class="w-100 d-flex flex-column border border-1 rounded-2 me-lg-3">
+
+                    <div class="p-4 ">
+                        <h3 class="">🗓️ Meetup</h3>
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h4>Finance & Investment Elite Social Mixer @Lujiazui</h4>
+                            <div class="btn">
+                                <div class="dropdown">
+                                    <div type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img class=" w-60 h-100 " src="images/Vector.png" alt="more details" height="22"
+                                            width="22">
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item" type="button">Save</button></li>
+                                        <li><button class="dropdown-item" type="button">Report</button></li>
+                                        <li><button class="dropdown-item" type="button">Option 3</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="d-flex align-items-center gap-5 mt-2 list-unstyled ">
+                            <li class="d-flex align-items-center gap-1"><img
+                                    src="images/icons/outline-work_outline-24px.png" alt="date" width="20px"
+                                    height="20px">Innovaccer Analytics Private Ltd.</li>
+                            <li class="d-flex align-items-center gap-1"><img src="images/outline-location_on-24px 2.png"
+                                    alt="location" width="20px" height="20px">Noida, India</li>
+                        </ul>
+                        <button class="applyjob custom-post-link btn mb-4 fw-semibold w-100 ">Apply on
+                            Timesjobs</button>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2">
+                                <img class="rounded-circle" alt="Profile" src="images/Rectangle 3-3.png" width="48"
+                                    height="48">
+                                <div class="d-flex flex-column">
+                                    <div class="text-wrapper">Siddharth Goyal</div>
+                                    <div class="d-lg-none d-flex align-items-center gap-2">
+                                        <img src="images/visibility_24px_outlined.png" alt="watch">
+                                        <span>1.4k views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-lg-block pe-4">
+                                <img src="images/visibility_24px_outlined.png" alt="watch">
+                                <span>1.4k views</span>
+                            </div>
+                            <button class="btn d-flex align-items-center gap-2" style="background: rgb(237, 238, 240);">
+                                <img src="images/baseline-share-24px.png" alt="share">
+                                <span class="d-lg-none">Share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- right post section -->
+
+        <div class="w-50 d-none d-lg-block  ms-4">
+            <div class="  ">
+
+                <div class="d-flex justify-content-between  align-items-center">
+                    <div class="d-flex align-items-center">
+                        <img src="images/outline-location_on-24px 2.png" alt="location">
+                        <input type="text" placeholder="Enter Your Location"
+                            class="form-control ms-2 border-0 outline-none ">
+                    </div>
+                    <button class="btn">
+                        <img src="images/icons/baseline-edit-24px.png" alt="edit">
+                    </button>
+                </div>
+                <hr class="my-1">
+                <div class="d-flex align-items-center gap-2 mb-4">
+                    <img src="images/icons/baseline-error_outline-24px.png" alt="information" class="align-self-start">
+                    <p class="location-info">Your location will help us serve better and extend a personalised
+                        experience.</p>
+                </div>
+                <div class="d-none" id="rec">
+                    <div class="d-flex align-items-center gap-2 text-capitalize mb-3">
+                        <img src="images/icons/twotone-thumb_up-24px.png" alt="thumbs up">
+                        <span class="text-recommended">Recommended Groups</span>
+                    </div>
+                    <div class="d-flex  flex-column gap-4">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <img class="rounded-circle" alt="Profile" src="images/zach.png" width="36" height="36">
+                                <div class="text-wrapper">Leisure</div>
+                            </div>
+                            <a class="btn follow rounded-5" href="/">Follow</a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <img class="rounded-circle" alt="Profile" src="images/activism.png" width="36"
+                                    height="36">
+                                <div class="text-wrapper">Activism</div>
+                            </div>
+                            <a class="btn follow rounded-5" href="/">Follow</a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <img class="rounded-circle" alt="Profile" src="images/MBA.png" width="36" height="36">
+                                <div class="text-wrapper">MBA</div>
+                            </div>
+                            <a class=" btn follow rounded-5" href="/">Follow</a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <img class="rounded-circle" alt="Profile" src="images/Philosphy.png" width="36"
+                                    height="36">
+                                <div class="text-wrapper">Philosophy</div>
+                            </div>
+                            <a class="btn follow rounded-5" href="/">Follow</a>
+                        </div>
+                    </div>
+                    <button class="btn text-end mt-4 text-primary text-capitalize">see more...</button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- mobile-mdal -->
+    <section>
+        <a id="" class="text-decoration-none text-reset" data-bs-target="#myModal" data-bs-toggle="modal"
+            href="#myModal" role="button">
+            <div class="rounded-button d-lg-none">
+
+                <img src="images/icons/edit_24px.png" alt="Button Image">
+            </div>
+        </a>
+
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-fullscreen-xxl-down modal-dialog-centered">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel">Create Account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body mt-5 mx-4">
+                        <form>
+                            <div class="d-flex w-100">
+                                <div class="w-50">
+                                    <input type="text" class="form-control rounded-0" id="fname"
+                                        placeholder="First Name">
+                                </div>
+                                <div class="w-50">
+                                    <input type="text" class="form-control rounded-0" id="lname"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="">
+
+                                <input type="email" class="form-control rounded-0" id="email"
+                                    placeholder="Your email..">
+                            </div>
+                            <div class="">
+
+                                <input type="password" class="form-control rounded-0" id="password"
+                                    placeholder="Your password..">
+                            </div>
+                            <div class="">
+
+                                <input type="password" class="form-control rounded-0" id="confirm-password"
+                                    placeholder="Confirm password..">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center my-4">
+                                <button type="submit" class="btn rounded-pill btn-primary">Create Account</button>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-outline-secondary w-100 my-2"> <img
+                                src="images/f_logo_RGB-Blue_1024.png" alt=""> Sign Up with Facebook</button>
+                        <button type="button" class="btn btn-outline-secondary w-100 "> <img src="images/search.png"
+                                alt=""> Sign Up with Google</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signInModalLabel">Welcome back</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+
+                            <div class="">
+
+                                <input type="email" class="form-control rounded-0" id="email"
+                                    placeholder="Your email..">
+                            </div>
+                            <div class="">
+
+                                <input type="password" class="form-control rounded-0" id="password"
+                                    placeholder="Your password..">
+                            </div>
+                            <div class="">
+
+                                <input type="password" class="form-control rounded-0" id="confirm-password"
+                                    placeholder="Confirm password..">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center my-2">
+                                <button type="submit" class="btn rounded-pill btn-primary ">Sign In</button>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#signInModal" class="p-3">Create
+                                    Account</a>
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-outline-secondary w-100 my-2"> <img
+                                src="images/f_logo_RGB-Blue_1024.png" alt=""> Sign In with Facebook</button>
+                        <button type="button" class="btn btn-outline-secondary w-100 "> <img src="images/search.png"
+                                alt=""> Sign In with Google</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
